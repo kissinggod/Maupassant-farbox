@@ -1,0 +1,12 @@
+mixin make_post(post, is_detail=False)
+	.post
+		.post-title
+			h2
+				if is_detail
+					include include/detailtitle
+				else
+					include include/listtitle
+		if is_detail
+			include include/detailcontent
+		else
+			include include/listcontent

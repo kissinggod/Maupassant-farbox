@@ -1,0 +1,5 @@
+if post.metadata.intro
+				.post-content.markdown
+					.intro= post.metadata.intro
+			else
+				.post-content.markdown= post.content.opening or post.content.limit(150).no_pic
