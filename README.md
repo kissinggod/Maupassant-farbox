@@ -27,5 +27,5 @@ Maupassant是Cho为原Farbox平台开发的一款主题，其设计简洁雅致�
 - 图片和按钮取消圆角，以令整体设计更协调
 - 增加自适应设计，在手机上浏览时，超出元素宽度的表格及导航栏隐藏
 
-以上。具体效果可参考[**示例页面**](/post/webkai-fa/lorem2)。
+以上。具体效果可参考[**示例页面**](http://bit.lanieldev.com/post/webkai-fa/lorem2)。
 
