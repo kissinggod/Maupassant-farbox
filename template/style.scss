@@ -5,9 +5,245 @@
  * @version 2.0
  * @link http://chopstack.com
  */
+ 
+ @font-face {
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/template/fonts/Forum-Regular.woff');
+}
+
+
+/*font-icon*/
+
+@font-face {
+	font-family: 'cola_icon';
+	src:url('/template/fonts/cola_icon.eot?-54fria');
+	src:url('/template/fonts/cola_icon.eot?#iefix-54fria') format('embedded-opentype'),
+		url('/template/fonts/cola_icon.woff?-54fria') format('woff'),
+		url('/template/fonts/cola_icon.ttf?-54fria') format('truetype'),
+		url('/template/fonts/cola_icon.svg?-54fria#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'cola_icon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow_down:before {
+    content: "\e600";
+}
+.icon-arrow_left:before {
+    content: "\e601";
+}
+.icon-arrow_right:before {
+    content: "\e602";
+}
+.icon-arrow_up:before {
+    content: "\e603";
+}
+.icon-arrow2_down:before {
+    content: "\e604";
+}
+.icon-arrow2_left:before {
+    content: "\e605";
+}
+.icon-arrow2_right:before {
+    content: "\e606";
+}
+.icon-arrow2_up:before {
+    content: "\e607";
+}
+.icon-cat_book:before {
+    content: "\e608";
+}
+.icon-cat_dream:before {
+    content: "\e609";
+}
+.icon-cat_food:before {
+    content: "\e60a";
+}
+.icon-cat_geek:before {
+    content: "\e60b";
+}
+.icon-cat_humor:before {
+    content: "\e60c";
+}
+.icon-cat_life:before {
+    content: "\e60d";
+}
+.icon-cat_media:before {
+    content: "\e60e";
+}
+.icon-cat_photo:before {
+    content: "\e60f";
+}
+.icon-cat_translate:before {
+    content: "\e610";
+}
+.icon-icon_book:before {
+    content: "\e611";
+}
+.icon-icon_clock:before {
+    content: "\e612";
+}
+.icon-icon_menu:before {
+    content: "\e613";
+}
+.icon-icon_qr:before {
+    content: "\e614";
+}
+.icon-icon_search:before {
+    content: "\e615";
+}
+
+ 
+ article.post{
+margin-bottom:2em;
+}
+
+.author{
+margin-top:2em;
+}
+
+
+
+.author {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 0;
+   font-family: "monarcha","source-han-sans-simplified-c",sans-serif;
+  font-size: 17px;
+  display:table;
+  clear:both;
+  width:100%;
+}
+
+@media (max-width: 47.9em) {
+  .author {
+    text-align: center;
+  }
+}
+
+.author + .author {
+  margin-top: 0.941rem;
+}
+
+.author .author-inner {
+  position: relative;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.882rem;
+  display:table;
+  clear:both;
+  width:100%;
+}
+
+.author .author-avatar {
+  float: left;
+  width: 20%;
+  height: auto;
+}
+
+@media (max-width: 47.9em) {
+  .author .author-avatar {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.941rem;
+  }
+}
+
+.author .author-bio {
+  width: 80%;
+  float: left;
+  padding-left: 1.882rem;
+}
+
+@media (max-width: 47.9em) {
+  .author .author-bio {
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.author h4 {
+  color: #fff;
+}
+
+.author-bg {
+  display:table;
+  clear:both;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 400px;
+  margin: -200px 0 0 -475px;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+  background-position: center center;
+  background-size: cover;
+}
+ 
+.related_posts.clearfix {
+	width: 100%;
+	display:block;
+	margin:2em 0;
+	padding-bottom:0.2em;
+	padding-top:1em;
+	a {
+		text-align:center;
+		overflow:hidden;
+		border: 0.5px solid #DDD;
+		margin:0.1em;
+		padding:0.5em;
+		display: block;
+		font-size: 0.9rem;
+		text-align: center;
+			&:hover{
+				border-color:#DC317F;
+			}
+		}
+	.pre {
+		float: left;
+		.arrow { float: left;font-size:1.5em;}
+		span { float: left;}
+	}
+	.next {
+		float: right;
+		.arrow { float: right;font-size:1.5em;}
+		span { float: right;}
+	}
+}
+
 
 body {
-	background-color: #FFF;
+	background: url(//7xu3hb.com1.z0.glb.clouddn.com/2017-02-10-Group6-1.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	color: #444;
 	font-family: "monarcha","source-han-sans-simplified-c","TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -40,9 +276,33 @@ body {
 .content_container {
 	padding-right: 50px;
 	padding-top: 20px;
-
+}
+#new_comment_form{
+	background-color: transparent !important;
+}
+.textarea_box{
+	background-color: transparent;
+}
+.doc_comments_wrapper{
+	background-color: transparent;
+}
+.doc_comments{
+	background-color: transparent;
+}
+.new_comment{
+	background-color: transparent;
+}
+.input_body{
+	background-color: transparent !important;
+}
+.ident{
+	background-color: transparent !important;
+}
+#password{
+	background-color: transparent !important;
 }
 #fb_comments_container{
+	background-color: transparent;
 	margin-top: 35px;
 	padding-top: 20px;
 	border-top:  1px solid rgba(150, 150, 150, 0.2);
@@ -56,7 +316,6 @@ a, button.submit {
 	transition: all .1s ease-in;
 	font-family: "monarcha","source-han-sans-simplified-c","TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
-
 a:hover, a:active {
 	color: #DC317F;
 	font-family: "monarcha","source-han-sans-simplified-c","TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
@@ -168,7 +427,9 @@ a:focus{
 	#search {
 		position: relative;
 		overflow: hidden;
+		background-color: transparent;
 		input {
+			background-color: transparent;
 			padding: 12px 30px 11px 15px;
 			line-height: 1.5;
 			border:1px solid #ddd;

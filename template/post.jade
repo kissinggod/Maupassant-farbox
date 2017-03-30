@@ -15,5 +15,23 @@ block content
 			.tags
 				for tag in post.tags
 					a(href="/tag/{{tag}}")= tag
+		.author
+  			.author-inner
+    			.author-avatar
+      				img(src='/avatar.png', alt='{{site.avatar}}')
+    			.author-bio
+      				h3 {{site.title}}
+      				|           {{site.configs.sub_title}}
+  			.author-bg(style="background-image:url('/avatar.png');")		
 
-		+post.comments_as_html()
+			.related_posts.clearfix
+				if posts.pre_one
+					a.action.pre(href=posts.pre_one.url)
+						.arrow.icon-arrow2_left
+						span= posts.pre_one.title
+				if posts.next_one
+					a.action.next(href=posts.next_one.url)
+						.arrow.icon-arrow2_right
+						span= posts.next_one.title
+
+			+post.comments_as_html()			
