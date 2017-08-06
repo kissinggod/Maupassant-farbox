@@ -118,15 +118,13 @@ margin-bottom:2em;
 margin-top:2em;
 }
 
-
-
 .author {
   height: 100%;
   position: relative;
   overflow: hidden;
   color: #fff;
   border-radius: 0;
-   font-family: "monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c",sans-serif;
+   font-family: "monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", sans-serif;
   font-size: 17px;
   display:table;
   clear:both;
@@ -179,6 +177,10 @@ margin-top:2em;
     float: none;
     padding: 0;
     width: 100%;
+  }
+  .comments{
+  	max-width:100%;
+  	overflow:scroll;
   }
 }
 
@@ -239,13 +241,13 @@ margin-top:2em;
 
 
 body {
-	background: url(//7xu3hb.com1.z0.glb.clouddn.com/2017-02-10-Group6-1.jpg) no-repeat center center fixed; 
+	background: url(http://7xu3hb.com1.z0.glb.clouddn.com/2017-02-10-Group6-1.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	color: #444;
-	font-family: "monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	font-family: "monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c", "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 14px;
@@ -260,7 +262,7 @@ body {
 }
 
 .label-title{
-	font-family: "monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	font-family: "monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c", "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
 
 .body_container {
@@ -269,9 +271,15 @@ body {
 	margin: 0 auto;
 }
 
-.doc_comments{
-	font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+.comment{
+    background-color: transparent !important;
 }
+
+.doc_comments{
+	font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+}
+
+
 
 .content_container {
 	padding-right: 50px;
@@ -280,6 +288,24 @@ body {
 #new_comment_form{
 	background-color: transparent !important;
 }
+
+.comments {
+	a{
+		&:hover{
+			color: #DC317F !important;
+		}
+	}
+}
+
+.comment_wrapper{
+	.author{
+		.author-date{
+			color:#444;
+			font-size: 0.7em;
+		}
+	}
+}
+
 .textarea_box{
 	background-color: transparent;
 }
@@ -300,6 +326,8 @@ body {
 }
 #password{
 	background-color: transparent !important;
+	border-radius:0 !important;
+	outline:medium;
 }
 #fb_comments_container{
 	background-color: transparent;
@@ -314,11 +342,11 @@ a, button.submit {
 	-moz-transition: all .1s ease-in;
 	-o-transition: all .1s ease-in;
 	transition: all .1s ease-in;
-	font-family: "monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	font-family: "monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
 a:hover, a:active {
 	color: #DC317F;
-	font-family: "monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	font-family: "monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c", "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
 a:focus{
 	outline:auto;
@@ -340,7 +368,7 @@ a:focus{
 			overflow: hidden;
 		}
 		#logo {
-			font: bold 38px/1.12 "monarcha","source-han-sans-simplified-c","Times New Roman", Georgia, Times, sans-serif;
+			font: bold 38px/1.12 "monarcha","source-han-sans-simplified-c", "Times New Roman", Georgia, Times, sans-serif;
 			color: #555;
 			span, &:hover {
 				color: #777;
@@ -401,7 +429,7 @@ a:focus{
 	margin-top: 45px;
 	padding-bottom: 20px;
 	word-wrap: break-word;
-	font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+	font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 
 	.widget {
 		margin-bottom: 30px;
@@ -458,13 +486,15 @@ a:focus{
 		margin: 0;
 		color: #555;
 		text-align: left;
-		font: bold 25px/1.1 "monarcha","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font-family: "monarcha","田氏宋体旧字形","Songti TC", "source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font-size:25px;
+		font-style: bold;
 		a {
 			color: #555;
 		}
 	}
 	.post-meta {
-		font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 		padding: 0;
 		margin: 9px 0 0;
 		color: #999;
@@ -478,7 +508,7 @@ a:focus{
 		color: #444;
 		padding-top: 27px;
 		overflow: visible;
-		font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 			a{
 					color:#444;
 					&:hover{
@@ -486,7 +516,7 @@ a:focus{
 						}
 					}	
 			.toc{
-					font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+					font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 					background-color: transparent; !important
 					border-radius:0 !important;
 					border: 0.5px solid #eaeaea !important;
@@ -499,7 +529,7 @@ a:focus{
 	}
 	.tags {
 		padding-bottom: 1em;
-		font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 		a {
 			margin-right: .5em;
 			color:#B7B7B7;
@@ -526,7 +556,7 @@ a:focus{
 		color: #444;
 		padding-top: 27px;
 		overflow: visible;
-		font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 		a{
 					color:#444;
 					&:hover{
@@ -599,7 +629,7 @@ p.md_block{
 	padding-bottom: .8em;
 	h2{
 		margin: 0;
-		font: bold 25px / 1.1 "monarcha","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font: bold 25px / 1.1 "monarcha","source-han-sans-simplified-c","Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 	}
 	.date {
 		padding-right: .7em;
@@ -714,13 +744,13 @@ p.md_block{
 	pre{
 		color:#DC317F;
 		margin:2em 0;
-		font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 		background-color: transparent;
 		border-radius:0;
 		border: 0.5px solid #eaeaea;
 	}
 	code{
-		font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simplified-c","ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+		font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 		background-color: transparent;
 		border-radius:0;
 		border: 0.5px solid #eaeaea;
@@ -732,6 +762,3 @@ p.md_block{
 		overflow:hidden;
 	}
 }
-
-
-	

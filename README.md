@@ -1,5 +1,21 @@
 # ReadMe
 
+## 重要声明
+
+本Mod不适配IE浏览器，未来也不会适配。用IE浏览器会出现部分功能或视觉效果出错的问题，建议使用Safari、Chrome等浏览器。
+
+## Maupassant for Bitcron Mod v1.1
+
+### 修复
+- 修复标签功能失效的问题
+- 修复背景图不显示的问题
+- 修复搜索功能失效的问题
+- 修复评论时间不显示的问题
+
+### 改进
+- 改进在小屏幕上评论宽度溢出容器的问题（将在下一个版本中重制评论系统样式，彻底解决这个问题）
+
+
 ## Maupassant for Bitcron Mod v1.0
 
 原作者：[Cho](https://github.com/pagecho)
@@ -189,3 +205,4 @@ font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simp
 }
 </style>
 ```
+

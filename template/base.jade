@@ -1,3 +1,4 @@
+
 from mixins import make_post
 html
 	head
@@ -26,7 +27,7 @@ html
 			.pure-u-7-24:#sidebar
 				.widget
 					#search
-						input#search_value.text(placeholder="Search",type="text",value=request.args.s, onkeyup="if (event.keyCode == 13) search();")
+						+posts.search_in_html()
 				.widget
 					.widget-title= _('Recent')
 					newest_posts = get_data(path='/', type='post', limit=8, sort='desc', with_page=False)
