@@ -411,6 +411,7 @@ a:focus{
 				border: 1px solid transparent;
 				&:hover {
 					border-bottom-color: #444;
+					color:#DC317F;
 				}
 				&.current{
 					border: 1px solid #ddd;
@@ -510,9 +511,10 @@ a:focus{
 		overflow: visible;
 		font-family:"monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 			a{
-					color:#444;
+					color:#DC317F;
+					text-decoration: underline;
 					&:hover{
-						color:#DC317F;
+						color:#444;
 						}
 					}	
 			.toc{
@@ -664,9 +666,16 @@ p.md_block{
 
 
 /*<middle*/
+@media screen and (min-width: 48em)
+pure.css?version=0.0806:18
+
+
 @media print, screen and (max-width: 48em) {
 	.body_container {
 		padding: 0 30px;
+		.pure-u-md-17-24 {
+    		width: 100% !important;
+		}
 	}
 	.content_container {
 		padding-right: 15px;

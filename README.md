@@ -4,6 +4,15 @@
 
 本Mod不适配IE浏览器，未来也不会适配。用IE浏览器会出现部分功能或视觉效果出错的问题，建议使用Safari、Chrome等浏览器。
 
+## Maupassant for Bitcron Mod v1.2
+
+### 微调
+- 更改博文超链接样式
+- 更改导航栏超链接悬停样式
+
+### 改进
+- 解决中尺寸屏幕（iPad或iPad Mini）在竖屏状态下，文章右侧出现大量空白的问题
+
 ## Maupassant for Bitcron Mod v1.1
 
 ### 修复
