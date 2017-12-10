@@ -4,6 +4,20 @@
 
 本Mod不适配IE浏览器，未来也不会适配。用IE浏览器会出现部分功能或视觉效果出错的问题，建议使用Safari、Chrome等浏览器。
 
+##  Maupassant for Bitcron Mod v1.5
+
+### 改进
+- 部分支持（去除了链接、标题等常见元素的样式）Bootstrap样式（需在站点后台-呈现-嵌入模板中更新设置，更新后的代码在下方）
+- 完全支持FontAwesome
+
+### 新增功能
+- 添加主页，可通过在站点根目录下创建`index.md`文件自行增加
+- 添加关于页面，可通过在站点根目录下创建`about.md`文件自行增加[^1]
+
+### 微调
+- 更改博客页面头部站点标题字体及颜色
+- 博客页面头部增加站点描述/副标题
+
 ## Maupassant for Bitcron Mod v1.2
 
 ### 微调
@@ -61,7 +75,93 @@ Maupassant是Cho为原Farbox平台开发的一款主题，其设计简洁雅致�
 注：需要在Bitcron网站后台的「呈现」面板中添加以下代码：
 
 ```
-<script src="https://use.typekit.net/rnh3yip.js"></script>
+<link rel="stylesheet" href="/template/style.scss">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/template/bootstrap2.css">
+
+<style>
+.site_nav:hover{
+color: #DC317F !important;
+}
+
+.nav__item{
+font-size:13px;
+}
+
+.nav__item:hover{
+		color: #DC317F !important;
+		}
+
+@-webkit-keyframes fadeIn {
+0% {
+opacity: 0; /*初始状态 透明度为0*/
+}
+50% {
+opacity: 0; /*中间状态 透明度为0*/
+}
+100% {
+opacity: 1; /*结尾状态 透明度为1*/
+}
+}
+
+.zzsc {
+	-webkit-transition: -webkit-transform 2s ease-out;
+	-moz-transition: -moz-transform 2s ease-out;
+	-o-transition: -o-transform 2s ease-out;
+	-ms-transition: -ms-transform 2s ease-out;
+	-webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 3s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.zzsc:hover {
+	-webkit-transform: rotateZ(360deg);
+	-moz-transform: rotateZ(360deg);
+	-o-transform: rotateZ(360deg);
+	-ms-transform: rotateZ(360deg);
+	transform: rotateZ(360deg);
+}
+
+h3 .subtitle{
+word-spacing:0.5em !important;
+}
+
+.subtitle{
+display:block;
+text-align:center !important;
+}
+
+.motto{
+text-align:center;
+font-size:1.5em!important;
+margin-top:-1.5em;
+}
+
+.test123{
+    display:inline;
+   text-align:center;
+    font-size:1em!important;
+    padding: 20px 5px 0 5px;
+    line-height:1;
+    }
+
+
+.btn-default{
+color:#000  !important;
+}
+
+.btn-default:hover{
+color:#de2b7f !important;
+}
+
+.introtext{
+text-align:center;
+color:#adadad;
+}
+
+</style>
+
+<script src="https://use.typekit.net/（你的Typekit KitID）.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 <style>
@@ -77,11 +177,11 @@ hide:hover{
    }
 
     .post-content img{
-            border-radius:5px;
+            border-radius:0;
     }
      
     .post-content img:hover{
-          border-radius:5px;
+          border-radius:0;
     }
     
     .alignright {
@@ -149,7 +249,7 @@ hide:hover{
          display:block;
          margin:0 auto;
         max-width: 100%;
-      border-radius:5px;
+      border-radius:0;
     }
     
     .wp-caption-text {
@@ -212,6 +312,13 @@ font-family:"monarcha","田氏宋体旧字形","ST Songti","source-han-sans-simp
 ::-moz-selection {
     background:#FCFCCF;
 }
+table, thead, tr, th, td{
+	background: transparent !important;
+}
+.tags a:hover{color:#DC317F !important;}
+.pager a:hover{color:#DC317F !important;}
 </style>
 ```
+
+[^1]: 具体的创建方式可以参考Bitcron的[官方说明](https://pi.bitcron.com)，如果赶时间可以看这篇个人认为总结得相当到位的[文章](https://www.liaoyuqin.com/post/help/pibitcron)。
 

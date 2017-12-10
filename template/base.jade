@@ -17,6 +17,7 @@ html
 			.site-name
 				h1.hidden= site.title
 				a#logo(href='/')= site.title
+				p.page-description= site.configs.sub_title
 				p.description= site.raw_content
 			#nav-menu
 				+site.just_nav

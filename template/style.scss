@@ -368,12 +368,18 @@ a:focus{
 			overflow: hidden;
 		}
 		#logo {
-			font: bold 38px/1.12 "monarcha","source-han-sans-simplified-c", "Times New Roman", Georgia, Times, sans-serif;
-			color: #555;
+			font: bold 24px/1.12 "rooney-sans","source-han-sans-simplified-c", "Times New Roman", Georgia, Times, sans-serif;
+			color: #DC317F;
 			span, &:hover {
 				color: #777;
 			}
 		}
+		.page-description{
+				font-family: "monarcha","田氏宋体旧字形","Songti TC","source-han-sans-simplified-c","PingFang SC", "Helvetica Neuve", sans-serif;;
+				font-weight:300;
+				font-size:17px;
+				font-style:italic;
+			}
 		.description {
 			margin: .2em 0 0;
 			color: #999;
@@ -594,7 +600,7 @@ p.md_block{
 .pager {
 	border-top: 1px solid #ddd;
 	margin-top: 25px;
-	margin-bottom: 15px;
+	margin-bottom: 0;
 	padding: 25px 0;
 	font-size: 14px;
 	a {
@@ -615,7 +621,7 @@ p.md_block{
 
 #footer {
 	padding: .8em 0 3.6em;
-	margin-top:1em;
+	margin-top:0;
 	line-height: 1.5;
 	color: #999;
 	span {
@@ -769,5 +775,15 @@ pure.css?version=0.0806:18
 		display:block;
 		max-width:100%;
 		overflow:hidden;
+		background: transparent !important;
+			thead{
+			background: transparent !important;
+				tr{
+					background: transparent !important;
+					th{
+						background: transparent !important;
+					}
+				}
+			}
 	}
 }
