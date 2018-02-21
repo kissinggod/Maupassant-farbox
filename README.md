@@ -4,6 +4,11 @@
 
 本Mod不适配IE浏览器，未来也不会适配。用IE浏览器会出现部分功能或视觉效果出错的问题，建议使用Safari、Chrome等浏览器。
 
+## Maupassant for Bitcron Mod v 1.6
+
+### 新增功能
+- 添加禁用单篇文章Rss feed的功能
+
 ##  Maupassant for Bitcron Mod v1.5
 
 ### 改进

@@ -1,0 +1,37 @@
+doctype xml
+
++response.set_content_type('application/xml')
+
+feed(xmlns="http://www.w3.org/2005/Atom")
+    title= site.title
+    description= site.configs.description.escaped
+    link(href="http://{{ request.host }}/")
+    link(ref="self", href="http://{{ request.host }}/feed")
+    id= site._id
+    feed_posts = posts.recent_10
+    
+    if feed_posts
+        updated= feed_posts[0]['date'].strftime('%Y-%m-%dT%H:%M:%SZ')
+    for post in feed_posts
+        if post.metadata.feedoutput == 'disable'
+            entry
+                post_url = 'http://' + request.host + post.url.escaped
+                title= post.title.escaped
+                link(href=post_url, rel="alternate")
+                updated= post.date.strftime('%Y-%m-%dT%H:%M:%SZ')
+                id= post.url_path.escaped
+                author
+                    name= site.configs.author or site.configs.admin_name or site.title
+                summary
+                	p
+                	|这是一篇受到密码保护的日志。            
+        else
+            entry
+                post_url = 'http://' + request.host + post.url.escaped
+                title= post.title.escaped
+                link(href=post_url, rel="alternate")
+                updated= post.date.strftime('%Y-%m-%dT%H:%M:%SZ')
+                id= post.url_path.escaped
+                author
+                    name= site.configs.author or site.configs.admin_name or site.title
+                summary(type="html")= post.content.escaped
